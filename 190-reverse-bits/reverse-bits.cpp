@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int reverseBits(int n) {
+        int ans=0;
+        int last;
+       for(int i=0;i<32;i++)
+       {
+    ans=ans <<1;
+    last=n&1;
+        ans=ans|last;
+        n=n>>1;
+       } 
+       return ans;
+    }
+};
